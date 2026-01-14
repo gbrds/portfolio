@@ -1,0 +1,130 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 120px;
+}
+
+/* Body */
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  font-family: "Manrope", sans-serif;
+}
+
+/* Make sure body text color uses dark value when html has .dark */
+html.dark body {
+  color: #f1f5f9;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f8fafc; /* light mode track */
+}
+
+html.dark body::-webkit-scrollbar-track {
+  background: #0a0c10; /* dark mode track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b; /* light mode thumb */
+  border-radius: 4px;
+}
+
+html.dark body::-webkit-scrollbar-thumb {
+  background: #1e2936; /* dark mode thumb */
+}
+
+/* Organic background */
+.organic-bg {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.organic-blob {
+  position: absolute;
+  background: radial-gradient(circle,
+      rgba(0, 229, 255, 0.15) 0%,
+      rgba(0, 0, 0, 0) 70%);
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.6;
+  animation: blob 20s infinite alternate;
+}
+
+.soft-glow {
+  position: absolute;
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle,
+      rgba(0, 229, 255, 0.03) 0%,
+      rgba(0, 0, 0, 0) 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hover-glow:hover {
+  box-shadow: 0 0 30px rgba(0, 229, 255, 0.1);
+  border-color: rgba(0, 229, 255, 0.3);
+}
+
+.text-glow {
+  text-shadow: 0 0 20px rgba(0, 229, 255, 0.3);
+}
+
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(0, 229, 255, 0.3);
+  pointer-events: none;
+}
+
+/* Portrait */
+.portrait-container {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  padding: 4px;
+  background: linear-gradient(135deg,
+      rgba(0, 229, 255, 0.2),
+      rgba(0, 0, 0, 0));
+  box-shadow: 0 0 40px rgba(0, 229, 255, 0.15);
+  shape-outside: circle(50%);
+}
+
+.portrait-inner {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #ffffff; /* light mode inner */
+  background-size: 60%;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,0.05);
+  position: relative;
+}
+
+html.dark .portrait-inner {
+  background-color: #1a202c; /* dark mode inner */
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.portrait-inner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
+}
