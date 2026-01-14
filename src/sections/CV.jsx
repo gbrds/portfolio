@@ -29,7 +29,7 @@ export default function CV() {
             
             {/* View Online */}
             <a
-              href={CV_PDF_PATH}
+              href="https://drive.google.com/file/d/1hgowMv1vJLeJY_19ZAol1WohhHo7lO0P/view?usp=drive_link"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center h-14 px-8 bg-transparent text-text-dark dark:text-text-light border border-border-dark dark:border-border-light/25 rounded-full font-bold text-base tracking-wide transition-all dark:hover:bg-primary/10 hover:bg-primary-dark/10 dark:hover:border-primary hover:border-primary-dark dark:hover:text-primary hover:text-primary-dark active:scale-95"
