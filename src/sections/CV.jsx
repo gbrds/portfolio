@@ -1,7 +1,7 @@
 import SectionWrapper from "../components/SectionWrapper";
 
 export default function CV() {
-  const CV_PDF_PATH = "/images/CV_JussJoosepHoldt.pdf";
+  const CV_PDF_PATH = "../assets/images/CV_JussJoosepHoldt.pdf";
 
   return (
     <SectionWrapper id="cv">
